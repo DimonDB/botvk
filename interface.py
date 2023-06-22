@@ -75,6 +75,7 @@ class BotInterface():
                             self.message_send(event.user_id,f'Имя: {self.users["name"]} ссылка: vk.com/{self.users["id"]}',
                             attachment=photo_string
                             )
+                            # Проверка и добавление в бд
                             if not user_check(engine, event.user_id, self.users["id"]):
                                 add_bd_user(engine, event.user_id, self.users["id"])
                     elif command == 'пока':
