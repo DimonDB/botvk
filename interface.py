@@ -76,7 +76,7 @@ class BotInterface():
                             attachment=photo_string
                             )
                             # Проверка и добавление в бд
-                            if not user_check(engine, event.user_id, self.users["id"]):
+                            if user_check(engine, event.user_id, self.users["id"]) is False:
                                 add_bd_user(engine, event.user_id, self.users["id"])
                     elif command == 'пока':
                         self.message_send(event.user_id, 'Плка')
