@@ -5,7 +5,7 @@ from vk_api.utils import get_random_id
 from sqlalchemy import create_engine
 from config import comunity_token, acces_token, db_url_object
 from core import VkTools
-from data_store import engine, Tools, user_check, add_bd_user
+from data_store import engine, user_check, add_bd_user
 
 class BotInterface():
 
