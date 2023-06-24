@@ -21,7 +21,7 @@ class VkTools():
         except VkApiError as e:
             info = {}
             print(f'error = {e}')
-            return {
+        return {
                 'name': info['first_name'] + ' ' + info['last_name'],
                 'id': info['id'],
                 'bdate': info['bdate'] if 'bdate' in info else None,
