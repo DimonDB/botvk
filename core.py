@@ -22,11 +22,11 @@ class VkTools():
             info = {}
             print(f'error = {e}')
         return {
-                'name': info['first_name'] + ' ' + info['last_name'],
-                'id': info['id'],
-                'bdate': info['bdate'] if 'bdate' in info else None,
-                'sex': info('sex') if 'sex' in info else None,
-                'city': info('city')['title'] if 'city' in info else None,
+                'name': (info['first_name'] + ' ' + info['last_name']) if 'first_name' in info and 'last_name' in info else None,
+                'id': info.get['id'],
+                'bdate': info.get['bdate'] if info.get['bdate'] is not None else None,
+                'sex': info.get('sex') if info.get('sex') is not None else None,
+                'city': info.get('city')['title'] if info.get('city') is not None else None,
             }
     
     def search_users(self, params, offset):
