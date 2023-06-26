@@ -67,9 +67,9 @@ class BotInterface():
                         f'photo{photo["owner_id"]}_{photo["id"]},'
                         for photo in photos
                             )
-                    self.offset += 10
+                        self.offset += 10
                     self.message_send(event.user_id,f'Имя: {self.users["name"]} ссылка: vk.com/{self.users["id"]}',
-                    attachment=photo_string
+                        attachment=photo_string
                             )
                             # Проверка и добавление в бд
                     if user_check(engine, event.user_id, self.users["id"]) is False:
